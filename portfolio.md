@@ -1,8 +1,3 @@
----
-
-
----
-
 <h2 id="education">Education</h2>
 <p><strong>2017.03</strong> ~ 광운대학교 정보융합학부 데이터사이언스 전공<br>
 <strong>2019.09 ~ 2019.12</strong> IITP (정보통신기획평가원) 주관 ‘K-SW 스퀘어 퍼듀대학교 가을 교육 프로그램’ 교육생</p>
