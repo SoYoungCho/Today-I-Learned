@@ -7,4 +7,13 @@
   + [1.20 notes](https://github.com/SoYoungCho/What-I-Have-Learned/blob/master/Deeplearning%20Seminar/1.20.ipynb)
   + [1.20 multi-variable PDF](https://github.com/SoYoungCho/What-I-Have-Learned/blob/master/Deeplearning%20Seminar/1.%2020%20x%EA%B0%80%20%EC%97%AC%EB%9F%AC%20%EA%B0%9C.pdf)
   
-* Neural Machine Translation
+* Neural Machine Translation (Capstone Project) *(20.01 ~)*
+  + RNN
+  + LSTM
+  + GRU
+  + seq2seq
+  + teacher forcing
+  + attention
+  + beam search
+  + BLEU
+ 
