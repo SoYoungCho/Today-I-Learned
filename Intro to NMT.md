@@ -1,8 +1,3 @@
----
-
-
----
-
 <h1 id="neural-machine-translation">Neural Machine Translation</h1>
 <p>기계번역의 전반적 흐름 파악하기 위해 towards data science 홈페이지의 <a href="https://towardsdatascience.com/neural-machine-translation-15ecf6b0b">이 글</a>을 참고.</p>
 <h3 id="encoder-decoder-구조">Encoder decoder 구조</h3>
