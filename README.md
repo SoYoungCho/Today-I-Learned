@@ -1,4 +1,4 @@
-# What-I-Have-Learned
+# Today-I-Learned
  
 * Deep Learning Seminar *(20.01.10 ~ )*
   + [1.17 notes](https://github.com/SoYoungCho/What-I-Have-Learned/blob/master/Deeplearning%20Seminar/1.17.ipynb)
