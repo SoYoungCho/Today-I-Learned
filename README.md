@@ -14,8 +14,10 @@
   + LSTM
   + GRU
   + seq2seq
+   + [1.28 by jeongwonkwak](https://github.com/jeongwonkwak/Today-I-Learned/blob/master/Deep%20Learning/NMT/seq2seq.pdf)
   + teacher forcing
   + attention
+   + [1.28 by jeongwonkwak](https://github.com/jeongwonkwak/Today-I-Learned/blob/master/Deep%20Learning/NMT/Attention.pdf)
   + beam search
   + BLEU
  
