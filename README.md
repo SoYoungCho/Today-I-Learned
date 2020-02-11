@@ -11,6 +11,9 @@
   + [1.27]
   + [1.29]
   + [1.31]
+  + [2.03]
+  + [2.05]
+  + [2.10 MNIST](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/2.10.md)
   
 ### Neural Machine Translation (Capstone Project) *(20.01 ~)*
   + Intro to NMT
