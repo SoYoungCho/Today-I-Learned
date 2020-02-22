@@ -12,8 +12,8 @@
   + [20.01.27 Non-linear Boundary, Pytorch](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.27%20Non-linear%20Boundary%2C%20Pytorch.md)
   + [20.01.29 Information Gain, KL Divergence](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.29%20Information%20Gain%2C%20KL%20Divergence.md)
   + [20.01.31 Neuron, Activation Function](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.31%20Neuron%2C%20Activation%20Function.ipynb)
-  + [2.03 Hidden Layers](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.03%20Hidden%20Layers.ipynb)
-  + [2.05]
+  + [20.02.03 Hidden Layers](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.03%20Hidden%20Layers.ipynb)
+  + [20.02.05 Softmax Function]
   + [20.02.10 MNIST](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.10%20MNIST.md)
   + [20.02.12 Multi-layer Perceptron (MLP)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.12%20Multi%20layer%20perceptron.ipynb)
   
