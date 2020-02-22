@@ -13,6 +13,11 @@
   + [20.02.05 Softmax Function]
   + [20.02.10 MNIST](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.10%20MNIST.md)
   + [20.02.12 Multi-layer Perceptron (MLP)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.12%20Multi%20layer%20perceptron.ipynb)
+  + [20.02.14 MLP with MNIST, Dropout, Auto-Encoder]
+  + [20.02.17 (Experiment) Random Initialization Effect]
+  + [20.02.17 CNN]
+  + [20.02.19 LeNet-5]
+  
   
 ### Neural Machine Translation (Capstone Project) *(20.01 ~)*
   + Intro to NMT
