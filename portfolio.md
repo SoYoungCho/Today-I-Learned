@@ -1,15 +1,14 @@
-## Education
+## Education 
 
 **2017.03** ~ 광운대학교 정보융합학부 데이터사이언스 전공  
 **2019.09 ~ 2019.12** IITP (정보통신기획평가원) 주관 'K-SW 스퀘어 퍼듀대학교 가을 교육 프로그램' 교육생  
 
----
+Current GPA : 4.29 / 4.5
 
 ##  Research Interest
 
 Natural Language Processing, Machine Translation, Machine Learning, Data Mining, Data Analysis
 
----
 
 ##  Study & Workshops
 
@@ -49,6 +48,8 @@ ETRI 진행 '기계번역-포스트에디팅 병렬 코퍼스 구축 프로젝�
 **2019.01 ~ 2019.08** 광운대학교 소프트웨어융합대학 단과대학 학생회 '별' 홍보국장  
 **2019.01.02. ~ 2019.01.04** 교육부 주최 대학생 교육기부 프로그램 ‘2019 겨울쏙쏙캠프’ (파주운정초등학교)  
 **2020.01 ~** 광운대학교 47대 총학생회 비상대책위원회 홍보국장  
+
+---
 
 ## Honors & Awards
 
