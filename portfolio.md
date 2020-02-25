@@ -62,7 +62,7 @@ ETRI 진행 '기계번역-포스트에디팅 병렬 코퍼스 구축 프로젝�
 **2018.12** 광운대학교 영자신문사 주관 '제19회 English Essay Contest' 동상  
 **2018.12** 광운대학교 소프트웨어융합대학 SW우수장학생(1급) 선발  
 **2019.04** 한국의약품안전관리원 주최 '빅데이터 활용 의약품 안전관리 공모전' 우수상 수상 (2등)  
-[공모전 공고](https://www.drugsafe.or.kr/iwt/ds/ko/bbs/EgovBbs.do?bbsId=BBSMSTR_000000000011&nttId=2871&pageIndex=2&searchCnd=0&searchWrd=) [본선진출 팀 안내 공고](https://www.drugsafe.or.kr/iwt/ds/ko/bbs/EgovBbs.do?bbsId=BBSMSTR_000000000011&nttId=2925)
+[공모전 공고](https://www.drugsafe.or.kr/iwt/ds/ko/bbs/EgovBbs.do?bbsId=BBSMSTR_000000000011&nttId=2871&pageIndex=2&searchCnd=0&searchWrd=) [본선진출 팀 안내 공고](https://www.drugsafe.or.kr/iwt/ds/ko/bbs/EgovBbs.do?bbsId=BBSMSTR_000000000011&nttId=2925)  
 **2019.09** Dean's List (2019년 1학기 학업 우수상)  
 **2019.11** 2019 AI WorldCup 국제대회 'AI 해설 부문' 우승 (1등) [관련기사1](http://news.g-enews.com/view.php?ud=2019110400251328110bf3fa6eb9_1&md=20191104145516_M) [관련기사2](http://www.newsworks.co.kr/news/articleView.html?idxno=408035) [관련기사3](http://www.zdnet.co.kr/view/?no=20191103215931) [뉴스핌 기사](http://www.newspim.com/news/view/20191103000165) [SBS기사](https://news.sbs.co.kr/news/endPage.do?news_id=N1005506477&plink=ORI&cooper=NAVER) [YNA 기사](https://www.yna.co.kr/view/AKR20191103034600063?input=1195m)  
 **2019.12** 광운대학교 소프트웨어융합대학 SW우수장학생 선발  
