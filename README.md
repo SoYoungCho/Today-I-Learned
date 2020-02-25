@@ -17,6 +17,7 @@
   + [20.02.17 (Experiment) Random Initialization Effect]
   + [20.02.17 CNN]
   + [20.02.19 LeNet-5]
+  + [20.02.24 Box and Whisker Plot, HOG (Histogram of Oriented Gradients)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.24%20Box%20and%20Whisker%20plot%2C%20HOG%20for%20img%20feature%20extraction.ipynb)
   
   
 ### Neural Machine Translation (Capstone Project) *(20.01 ~)*
