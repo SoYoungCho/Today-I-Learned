@@ -1,4 +1,4 @@
-# Today-I-Learned
+# Today-I-Learned 📚
  
 ### Deep Learning Seminar *(20.01.10 ~ )*
 
