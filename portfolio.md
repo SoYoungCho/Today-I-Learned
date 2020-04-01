@@ -17,7 +17,7 @@ Natural Language Processing, Machine Translation, Machine Learning, Data Mining,
 **2019.03.31** MSP Evangelim : RL with openAI Gym (강화학습 세미나)  
 **2019.05 -** 국가연구재단(NRF) 딥러닝 기반 자연어 처리 관련 연구 참여 학부연구생 (정한조 교수님)  
 **2019.07** 텐서플로우 스터디 진행 (정한조 교수님)  
-**2020.01 -** Deep Learning Study  
+**2020.01 - 2020.02** Deep Learning Study  
 
 ---
 
