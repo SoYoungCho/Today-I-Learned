@@ -72,7 +72,7 @@ ETRI 진행 '기계번역-포스트에디팅 병렬 코퍼스 구축 프로젝�
 
 ## Certification
 
+**2020.04** OPIC AL
+**2019.08** TOEIC 970 
 **2017.11** TOEIC SPEAKING 레벨7 (score : 180)  
 **2017.11** TOEIC WRITING 레벨8 (score : 190)  
-**2019.08** TOEIC 970  
-**2020.05** TEPS (예정)  
