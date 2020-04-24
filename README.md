@@ -34,4 +34,4 @@
   + BLEU
  
 ### Machine Learning
-  + Recommendation Systems[slides](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Machine%20Learning%20with%20Spark/5.%20Recommender%20System.pdf)
+  + Recommendation Systems [(slides)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Machine%20Learning%20with%20Spark/5.%20Recommender%20System.pdf)
