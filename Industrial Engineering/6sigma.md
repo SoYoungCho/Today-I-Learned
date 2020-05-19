@@ -18,17 +18,17 @@
 - 특징4. 고객만족도 향상
 
 ### 주요 방법론 2가지
-1. DMA**IC** 방법론 (시스템 및 프로세스에 초점)
-- define - measure - analyze - **improve - control**
-(1) Define : 기업전력 & 소비자 요구 일치하는 디자인활동 목표 설정
-(2) Measure : 현재 프로세스 능력, 제품 수준 등 측정
-(3) Anlayze : 디자인 컨셉 개발, 가능성 평가
-(4) Improve : 바람직한 프로세스 구축되도록 시스템 구성요소들 개선
-(5) Control : 목표한 성과 거두도록 투입요소와 변동성 관리
-
-2. DMA**DV** 방법론 (디자인 초점)
-- define - measure - analyze - **design- verify**
-(4) Design : 디자인 최적화, 디자인ㅇ 검증 위한 계획을 하는 단계. 시뮬레이션 함
-(5) Verify : 시험 작동, 프로세스 적용 관련 단계
+1. DMA**IC** 방법론 (시스템 및 프로세스에 초점)  
+- define - measure - analyze - **improve - control**  
+(1) Define : 기업전력 & 소비자 요구 일치하는 디자인활동 목표 설정  
+(2) Measure : 현재 프로세스 능력, 제품 수준 등 측정  
+(3) Anlayze : 디자인 컨셉 개발, 가능성 평가  
+(4) Improve : 바람직한 프로세스 구축되도록 시스템 구성요소들 개선  
+(5) Control : 목표한 성과 거두도록 투입요소와 변동성 관리  
+  
+2. DMA**DV** 방법론 (디자인 초점)  
+- define - measure - analyze - **design- verify**  
+(4) Design : 디자인 최적화, 디자인 검증 위한 계획을 하는 단계. 시뮬레이션 함  
+(5) Verify : 시험 작동, 프로세스 적용 관련 단계  
 
 [https://ko.wikipedia.org/wiki/6_%EC%8B%9C%EA%B7%B8%EB%A7%88](https://ko.wikipedia.org/wiki/6_%EC%8B%9C%EA%B7%B8%EB%A7%88)
