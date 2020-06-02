@@ -2,7 +2,7 @@
 // Os           : Ubuntu 18.04.4 LTS 64bits                         //
 // Author       : Cho So Young                                      //
 // ---------------------------------------------------------------- //
-// Title : System Programming Assiginment #3-1 ( ls implementaion ) //
+// Title : ls implementaion                                         //
 // Description : Implementation of ls command using socket()        //
 //////////////////////////////////////////////////////////////////////
 
