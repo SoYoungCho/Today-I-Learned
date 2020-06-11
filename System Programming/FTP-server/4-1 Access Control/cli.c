@@ -35,7 +35,7 @@ int main(int argc, char *argv[]){
         perror("socket");
         exit(1);
     }
-    sss
+    
     memset(&server, 0, sizeof(server)); // initialize server memory
     server.sin_family = AF_INET;
     server.sin_addr.s_addr = inet_addr(argv[1]); // server IP address client willing to connect
@@ -46,7 +46,7 @@ int main(int argc, char *argv[]){
         printf("Invalid Port number.\n");
         return 0;
     }
- 
+
     // 3. read (receive)
     initialize(rcv_buff, MAX_BUF); // initialize buffer before read
     if(read(sockfd, rcv_buff, MAX_BUF) > 0){ // reading has succeeded from sockfd to buff
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]){
             printf("from server : %s\n", rcv_buff); 
         }
         else if (!strcmp(rcv_buff, "REJECTION")){
-            printf("**Connect refused**");
+            printf("**Connect refused**\n");
             close(sockfd);
         }
     }
