@@ -60,22 +60,20 @@ int main(int argc, char *argv[]){
 
         // 4. accept
         connfd = accept(listenfd, (struct sockaddr *)&client, &cli_len); // accept a connect request from client
-
         client_ip = client_info(&client); // display client ip and port
 
         // code : check if client's IP accessible
-        if(check_ip(client_ip) == TRUE){
+        int check_result = check_ip(client_ip);
+        if(check_result == TRUE){
             write(connfd, "ACCEPTED", strlen("ACCEPTED"));
             printf("** Client is connected **\n");
             
         }
-        else if(check_ip(client_ip) == FALSE){
+        else if(check_result == FALSE){
             write(connfd, "REJECTION", strlen("REJECTION"));
             printf("** It is NOT authenticated client **\n");
         }
 
-        getchar();
-        
         /*
         if(log_auth(connfd) == 0){ // if 3 time fail (ok : 1, fail : 0)
             printf("** Fail to log-in **\n");
@@ -152,9 +150,7 @@ char *client_info(struct sockaddr_in *client){
         cmptokens[2] = strtok(NULL, ".");
         cmptokens[3] = strtok(NULL, ".");
 
-        while(!feof(fp_checkIP)){
-            pStr = fgets( buf, sizeof(buf), fp_checkIP );
-            printf( "%s", pStr );
+        while( (pStr = fgets(buf, sizeof(buf), fp_checkIP)) != NULL){
             char *tokens[4];
             tokens[0] = strtok(pStr, ".");
             tokens[1] = strtok(NULL, ".");
@@ -181,11 +177,9 @@ char *client_info(struct sockaddr_in *client){
                 return TRUE;
             }
 
-            getchar();
         }
         
     }
     fclose( fp_checkIP );
     return FALSE;
 }
-
