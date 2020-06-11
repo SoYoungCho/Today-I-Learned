@@ -7,6 +7,7 @@
 #include <netinet/in.h>
 #include <sys/wait.h>
 #include <fcntl.h>
+#include <pwd.h>
 //#include <signal.h>
 
 #define MAX_BUF 20
@@ -62,19 +63,18 @@ int main(int argc, char *argv[]){
         connfd = accept(listenfd, (struct sockaddr *)&client, &cli_len); // accept a connect request from client
         client_ip = client_info(&client); // display client ip and port
 
-        // code : check if client's IP accessible
+        // 5. check if client's IP accessable
         int check_result = check_ip(client_ip);
         if(check_result == TRUE){
             write(connfd, "ACCEPTED", strlen("ACCEPTED"));
             printf("** Client is connected **\n");
-            
         }
         else if(check_result == FALSE){
             write(connfd, "REJECTION", strlen("REJECTION"));
             printf("** It is NOT authenticated client **\n");
         }
 
-        /*
+        // 6. check login
         if(log_auth(connfd) == 0){ // if 3 time fail (ok : 1, fail : 0)
             printf("** Fail to log-in **\n");
             close(connfd);
@@ -82,7 +82,6 @@ int main(int argc, char *argv[]){
         }
         printf("** Success to log-in **\n");
         close(connfd);
-        */
     }
 
     return 0;
@@ -94,22 +93,33 @@ int log_auth(int connfd){
 
     while(1){
         // code : receive username and password from client
-        write(connfd, "OK", MAX_BUF);
+        printf("\n** User is trying to log-in (%d/3) **\n", count);
 
+        /////// read from client
+        read(connfd, user, MAX_BUF); // receive user ID from client
+        read(connfd, passwd, MAX_BUF); // receive user password from client
+
+        //printf("user sent %s and %s\n", user, passwd);
+
+        /////// match user //////
         if((n = user_match(user, passwd)) == 1){
             // code : verification OK
+            write(connfd, "OK", MAX_BUF);
+            return 1;
         }
-
         else if(n==0){
+            printf("** Log-in failed **\n");
             if(count >= 3){
                 // code : three times fail
+                write(connfd, "DISCONNECTION", MAX_BUF);
+                return 0;
             }
+            
             write(connfd, "FAIL", MAX_BUF);
             count++;
             continue;
         }
     }
-    return 1;
 }
 
 int user_match(char *user, char *passwd){
@@ -118,9 +128,21 @@ int user_match(char *user, char *passwd){
     struct passwd *pw;
 
     fp = fopen("passwd", "r");
-
-    // code : if success in verification, return 1.
-    // if fails, return 0
+    while((pw = fgetpwent(fp)) != NULL){
+        if(!strcmp(user, pw->pw_name)){ // name in struct pw
+            if(!strcmp(passwd, pw->pw_passwd)){ // if success in verification, return 1.
+                printf("correct!\n");
+                return 1;
+            }
+            else{ 
+                continue;
+            }
+        }
+        else{
+            continue;
+        }
+    }
+    return 0; // if fails, return 0
 }
 
 ////////////// function to print client information about IP address and Port number //////////////
