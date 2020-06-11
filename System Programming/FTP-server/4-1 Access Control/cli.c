@@ -52,40 +52,51 @@ int main(int argc, char *argv[]){
     if(read(sockfd, rcv_buff, MAX_BUF) > 0){ // reading has succeeded from sockfd to buff
         if(!strcmp(rcv_buff, "ACCEPTED")){
             printf("from server : %s\n", rcv_buff); 
+            log_in(sockfd);
         }
         else if (!strcmp(rcv_buff, "REJECTION")){
             printf("**Connect refused**\n");
             close(sockfd);
         }
     }
-
-
-    //log_in(sockfd);
-    //close(sockfd);
     return 0;
 }
 
 void log_in(int sockfd){
     int n;
-    char user[MAX_BUF], *passwd, buf[MAX_BUF];
-    // code : check if the ip is acceptable
+    char *user[MAX_BUF], *passwd, buf[MAX_BUF];
 
     while(1){
         // code : pass username to server
+        *user = getpass("Input ID : "); // turn off echoing to get user ID
+        printf("%s\n", *user);
+        char cp_user[MAX_BUF];
+        strcpy(cp_user, *user);
+        write(sockfd, *user, MAX_BUF);
+
+        passwd = getpass("Input Password : "); // turn off echoing to get user ID
+        printf("%s\n", passwd);
+        write(sockfd, passwd, MAX_BUF);
+
         n = read(sockfd, buf,  MAX_BUF);
         buf[n] = '\0';
 
         if(!strcmp(buf, "OK")){ // server send OK
             // code : login succes
+            printf("** User '[%s]' logged_in **\n", cp_user);
+            break;
         }
         else if(!strcmp(buf, "FAIL")){ // Server sent FAIL
             // code : login fail
+            printf("** Log-in failed **\n");
         }
         else{ // buf is DISCONNECTION
             // code : three times fail
-        }
+            printf("** Connection closed **\n");
+            break;
+        } 
     }
-
+    close(sockfd);
 }
 
 ////////////// function to initialize //////////////
