@@ -18,7 +18,7 @@
 #include <net/if.h>
 #include <sys/types.h>
 #include <netinet/in.h>
-
+#include <time.h>
 
 //////////////////////////////////////////////////////////////////////
 // Program of implemented split connection                          //
@@ -28,30 +28,29 @@
 // Purpose : client implementing split connection (control & data)  //
 //////////////////////////////////////////////////////////////////////
 
-#define TRUE 1
-#define MAX_BUF 20
-#define INIT_SIZE 64
+#define MAX_BUF 512
+#define INIT_SIZE 32
+
+#define SENT_REPLY_CODE "226 Result is sent successfully.\n"
 
 //define functions
 char* convert_addr_to_str(unsigned long ip_addr, unsigned int port);
-void initialize(char buff[], int length);
-int data_conncection(char *hostport);
+int host_data_conncection(char *hostport);
 char** split(char *string, char separator, int *num_tokens);
 char* str(int size);
+void initialize(char buf[], int length);
 
 // main function
-
 int main(int argc, char **argv){
     char *hostport;
     int sockfd;
     struct sockaddr_in temp;
-    char buff[MAX_BUF], cmd_buff[MAX_BUF], rcv_buff[MAX_BUF];
-    pid_t childpid;
-    // my code
+    char buf[MAX_BUF], cmd_buf[MAX_BUF], rcv_buf[MAX_BUF], tmp[MAX_BUF];
+    srand(time(0));
 
     // exception handling
     if(argc != 3){
-        printf("Client takes two arguments only.\n"); // client takes only IP address and Port number
+        printf("Client takes two arguments.\n"); // client takes only IP address and Port number
         return 0;
     }
 
@@ -72,55 +71,109 @@ int main(int argc, char **argv){
         printf("Invalid Port number.\n");
         return 0;
     }
-    printf("connect complete\n");
 
     // 3. enter ls command
-    printf("\nInput command : ");
-    fgets(cmd_buff, MAX_BUF, stdin); // client enters command
-    cmd_buff[strlen(cmd_buff)-1] = '\0';
-    int cmd_len = strlen(cmd_buff);
+    printf("\n> ");
+    initialize(cmd_buf, MAX_BUF);
+    fgets(cmd_buf, MAX_BUF, stdin); // client enters command "ls"
+    cmd_buf[strlen(cmd_buf)-1] = '\0';
+    
+    int cmd_len = strlen(cmd_buf);
 
-    if(!strcmp(cmd_buff, "ls")){ // user enters ls command
-        hostport = convert_addr_to_str(temp.sin_addr.s_addr, temp.sin_port);
-        write(sockfd, hostport, strlen(hostport)); // send PORT message, IP and port num
-        data_conncection(hostport);
+    if(!strcmp(cmd_buf, "ls")){ // user enters ls command
+        write(sockfd, cmd_buf,  MAX_BUF); // send ls command to server
+        hostport = convert_addr_to_str(temp.sin_addr.s_addr, temp.sin_port); // convert address to string
+        strcpy(tmp, hostport);
+
+        write(sockfd, hostport, MAX_BUF); // send converted PORT message to server
+        read(sockfd, rcv_buf, MAX_BUF); // receive PORT_REPLY_CODE
+        printf("%s\n",rcv_buf); // print PORT_REPLY_CODE
+
+        host_data_conncection(tmp); // call host_data_connection function
     }
-    else{
-        printf("Unsupported command %s\n",cmd_buff);
+    else{ // if user does not enter ls command
+        printf("Unsupported command %s\n",cmd_buf);
         write(sockfd, "UNKNOWN", strlen("UNKNOWN"));
     }
-
-    // 4. send ls command to server
-    //write(sockfd, cmd_buff, cmd_len); // send ls command to server
-    //send(sockfd, cmd_buff, cmd_len, 0); // send command to server
-    //printf("client writes %s %d\n", cmd_buff, cmd_len);
-    //initialize(rcv_buff, MAX_BUF); // initialize buffer
-
-    //int n = read(sockfd, rcv_buff,  MAX_BUF);     
-
-    //process_result(sd, cmd_buff, rcv_buff, cmd_len); // call process result funtion
-
 }
 
+////////////// function to convert client IP and randomly generated port num in to string //////////////
 char * convert_addr_to_str(unsigned long ip_addr, unsigned int port){
     // function returning ip address and random port number beside PORT command
     char *addr= (char *)&ip_addr;
     char ip_str[30] = {'\0'};
     int quotient, remainder;
-
-    int rand_port = rand()%20000 + 10001; // random sample port number between 10001 ~ 30000
+    
+        int rand_port = rand()%20000 + 10001; // random sample port number between 10001 ~ 30000
 
     quotient = rand_port >> 8; // same as divided by 2^8
     remainder = rand_port % 256; // remainder divided by 256
 
-    sprintf(ip_str, "PORT %d,%d,%d,%d,%d,%d", addr[0], addr[1], addr[2], addr[3], quotient, remainder);
-    printf("ip address: %s\n", ip_str);
-    addr = ip_str;
+    sprintf(ip_str, "PORT %d,%d,%d,%d,%d,%d", addr[0], addr[1], addr[2], addr[3], quotient, remainder); // make attatched string 
+    addr = ip_str; // return converted string
     return addr; 
 }
 
+////////////// function to make data connection as host //////////////
+int host_data_conncection(char *hostport){
+    char ip[20];
+    char port[20];
 
+    char buf[MAX_BUF];
+    struct sockaddr_in host, guest; // socket address structure for server and client
+    int listenfd, connfd, guest_len = sizeof(guest);
 
+    char **tokens;
+    int num_tokens = 0;
+
+    tokens = split(hostport, ' ', &num_tokens); // split hostport with blank
+    char **ip_with_port = split(tokens[1], ',', &num_tokens); // split right-side with commar
+
+    sprintf(ip, "%s.%s.%s.%s", ip_with_port[0], ip_with_port[1], ip_with_port[2], ip_with_port[3]); // combine ip
+    sprintf(port, "%d", atoi(ip_with_port[4]) * 256 + atoi(ip_with_port[5])); // combine port numb with simple transformation
+
+    // 1. create socket
+    if((listenfd = socket(PF_INET, SOCK_STREAM, 0)) == -1){
+        perror("socket");
+        exit(1);
+    }
+
+    memset(&host, 0, sizeof(host)); // initialize server memory
+    host.sin_family           = AF_INET;
+    host.sin_addr.s_addr      = inet_addr(ip); // host IP address
+    host.sin_port             = htons(atoi(port)); // host port number
+
+    // 2. bind
+    if(bind(listenfd, (struct sockaddr*)&host, sizeof(host)) == -1){;  // associate and address with a socket. sd is server socket descriptor
+        perror("bind"); // exception handling
+        exit(1);
+    }
+
+    // 3. listen
+    if(listen(listenfd, 5) == -1){ // willing to accept connect request
+        perror("listen"); // exception handling
+        exit(1);
+    }
+
+    // 4. accept
+    connfd = accept(listenfd, (struct sockaddr *)&guest, &guest_len); // accept a connect request from guest
+    
+    initialize(buf, MAX_BUF); // initialize buffer
+    read(connfd, buf, MAX_BUF); // receive data from guest descriptor connfd in buff
+    printf("%s\n",buf); // print received file name as result for ls command
+    int count = 0;
+
+    for (int i = 0; i < strlen(buf); i++){ // count files
+        if (buf[i] == '\n')
+            count++;
+    }
+
+    write(connfd, SENT_REPLY_CODE, strlen(SENT_REPLY_CODE)); // send code to guest
+    printf("%s", SENT_REPLY_CODE); // print sent message code
+    printf("OK. %ld bytes are received.\n", strlen(buf) * sizeof(char) - count * sizeof(char)); // calculate size and print
+}
+
+////////////// function to split string with separator //////////////
 char** split(char *string, char separator, int *num_tokens){
 	char **tokens;
 	int *lengths;
@@ -169,7 +222,7 @@ char** split(char *string, char separator, int *num_tokens){
 	return tokens;
 }
 
-
+////////////// function to initialize with dynamic allocation //////////////
 char* str(int size){
 	char *string = (char*)malloc(sizeof(char) * size);
 
@@ -179,92 +232,9 @@ char* str(int size){
 	return string;
 }
 
-int data_conncection(char *hostport){
-    char ip[20];
-    char port[20];
-
-    char buff[MAX_BUF], result_buff[MAX_BUF];
-    struct sockaddr_in svr_like_cli, cli_like_svr; // socket address structure for server and client
-    int listenfd, connfd, cli_len = sizeof(cli_like_svr);
-    int n;
-
-    char **tokens;
-    int num_tokens = 0;
-
-    printf("hostport : %s\n", hostport);
-    // PORT 127,0,0,1,78,54 
-
-    tokens = split(hostport, ' ', &num_tokens);
-    char **ip_with_port = split(tokens[1], ',', &num_tokens);
-    for(int i =0; i<num_tokens; i++){
-        printf("%s ", ip_with_port[i]);
-    }
-
-    sprintf(ip, "%s.%s.%s.%s", ip_with_port[0], ip_with_port[1], ip_with_port[2], ip_with_port[3]);
-    printf("ip : %s", ip);
-    sprintf(port, "%d", atoi(ip_with_port[4]) * 256 + atoi(ip_with_port[5]));
-    printf("port : %s", port);
-
-    getchar();
-    // (2) split IP and port num part with comma
-
-/* 
-    // 1. create socket
-    if((listenfd = socket(PF_INET, SOCK_STREAM, 0)) == -1){
-        perror("socket");
-        exit(1);
-    }
-
-    
-
-    
-    memset(&svr_like_cli, 0, sizeof(svr_like_cli)); // initialize server memory
-    svr_like_cli.sin_family           = AF_INET;
-    svr_like_cli.sin_addr.s_addr      = htonl(INADDR_ANY); // server IP address, find automatically
-    svr_like_cli.sin_port             = htons(atoi(argv[1])); // server port number
-
-    // 2. bind
-    if(bind(listenfd, (struct sockaddr*)&svr_like_cli, sizeof(svr_like_cli)) == -1){;  // associate and address with a socket. sd is server socket descriptor
-        perror("bind"); // exception handling
-        exit(1);
-    }
-
-    // 3. listen
-    if(listen(listenfd, 5) == -1){ // willing to accept connect request
-        perror("listen"); // exception handling
-        exit(1);
-    }
-
-    // 4. accept
-    connfd = accept(listenfd, (struct sockaddr *)&cli_like_svr, &cli_len); // accept a connect request from client
-    host_ip = client_info(&cli_like_svr); // display client ip and port
-
-    */
-}
-
-
-
 ////////////// function to initialize buffer //////////////
-void initialize(char buff[], int length){
+void initialize(char buf[], int length){
     for(int i = 0; i < length; i++)
-        buff[i] = '\0';
+        buf[i] = '\0';
     return;
 }
-
-////////////// function to print client information about IP address and Port number //////////////
-char *client_info(struct sockaddr_in *client){
-    char *client_ip = inet_ntoa(client->sin_addr);
-    int client_port = ntohs(client->sin_port);
-
-    printf("** Client is trying to connect **\n");
-    printf("- IP :  %s\n", client_ip);
-    printf("- Port :    %d\n", client_port);
-    return client_ip;
-}
-
-/*
-char *itos(int num){
-
-
-
-}*/
