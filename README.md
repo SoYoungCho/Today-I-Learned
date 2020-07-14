@@ -1,6 +1,6 @@
 # Today-I-Learned 📚
  
-### Deep Learning Seminar *(20.01.10 ~ )*
+### Deep Learning Seminar *(20.01.10 ~ 20.02)*
 
   + [20.01.17 Normalization](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.17%20Bias%2C%20LR%2C%20Normalization.ipynb)
   + [20.01.20 Multi-variable, Correlation](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.20%20Multi-variable%2C%20Correlation.ipynb)
@@ -20,15 +20,7 @@
   + [20.02.24 Box and Whisker Plot, HOG (Histogram of Oriented Gradients)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.24%20Box%20and%20Whisker%20plot%2C%20HOG%20for%20img%20feature%20extraction.ipynb)
   
   
-### Neural Machine Translation (Capstone Project) *(20.01 ~)*
-  + Intro to NMT
-  + RNN
-  + LSTM
-  + GRU
-  + seq2seq
-  + attention
-  + beam search
-  + BLEU
+### Neural Machine Translation (Capstone Project) *(20.01 ~ 20.06)*
  
 ### Machine Learning
   + Recommendation Systems [(slides)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Machine%20Learning%20with%20Spark/5.%20Recommender%20System.pdf)
