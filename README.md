@@ -1,5 +1,7 @@
 # Today-I-Learned 📚
- 
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSoYoungCho%2FToday-I-Learned%2F)](https://hits.seeyoufarm.com)
+
 ### Deep Learning Seminar *(20.01.10 ~ 20.02)*
 
   + [20.01.17 Normalization](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.17%20Bias%2C%20LR%2C%20Normalization.ipynb)
