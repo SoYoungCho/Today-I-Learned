@@ -9,7 +9,7 @@
 
 ### :fire: Deep Learning
 #### - NLP & Speech
-- `20/09/08` How does MFCC work? Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
+- `20/09/08` Voice Recognition Using MFCC Algorithm Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
 
 ### :seedling: Deep Learning Seminar *(20.01.10 ~ 20.02)*
 - Offline seminar, studyied the basics of Deep Neural Networks and implemented simple neurons using `numpy`.
