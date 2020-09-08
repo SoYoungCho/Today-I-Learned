@@ -8,8 +8,8 @@
 - Seminar is now made as online-course on [Fast-Campus](https://fastcampus.co.kr/data_online_mathdeep).
 
 ### System Programming
-- Took *System Programming* course in Computer Engineering department.
-- Implemented FTP Server in C. Codes can be found [here].
+- Took *System Programming* course in Computer Engineering department as a personal challenge.
+- Implemented FTP Server in C. Codes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/System%20Programming).
 
 ### Neural Machine Translation (Capstone Project) *(20.01 ~ 20.06)*
  
