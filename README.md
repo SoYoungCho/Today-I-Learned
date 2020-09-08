@@ -9,7 +9,7 @@
 
 ### System Programming
 - Took *System Programming* course in Computer Engineering department as a personal challenge.
-- Implemented FTP Server in C. Codes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/System%20Programming).
+- Implemented FTP Server in `C`. Codes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/System%20Programming).
 
 ### Neural Machine Translation (Capstone Project) *(20.01 ~ 20.06)*
  
