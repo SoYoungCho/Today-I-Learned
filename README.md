@@ -8,10 +8,11 @@
 - Seminar is now made as online-course on [Fast-Campus](https://fastcampus.co.kr/data_online_mathdeep).
 
 ### :floppy_disk: System Programming
-- Took *System Programming* course in Computer Engineering department as a personal challenge.
+- Took *System Programming* course in the department of Computer Engineering  as a personal challenge. (20-1)
 - Implemented FTP Server in `C`. Codes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/System%20Programming).
 
 ### Neural Machine Translation (Capstone Project) *(20.01 ~ 20.06)*
- 
+- Implemented OpenNMT based Korean-English NMT model as a capstone project. Project repo can be found [here](https://github.com/team012/OpenNMT-Project).
+
 ### Machine Learning
   + Recommendation Systems [(slides)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Machine%20Learning%20with%20Spark/5.%20Recommender%20System.pdf)
