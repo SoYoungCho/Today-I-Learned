@@ -11,11 +11,12 @@
 #### - NLP & Speech
 - `20/09/08` Voice Recognition Using MFCC Algorithm Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
 
-### :seedling: Deep Learning Seminar *(20.01.10 ~ 20.02)*
+### :seedling: Deep Learning Seminar
+- `2020/01 ~ 2020/02`
 - Offline seminar, studyied the basics of Deep Neural Networks and implemented simple neurons using `numpy`.
 - Related works and TIL notes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/Deeplearning%20Seminar).
 - Seminar is now made as online-course on [Fast-Campus](https://fastcampus.co.kr/data_online_mathdeep).
 
 ### :floppy_disk: System Programming
-- Took *System Programming* course in the department of Computer Engineering  as a personal challenge. (20-1)
+- Took *System Programming* course in the department of Computer Engineering  as a personal challenge. `20-1`
 - Implemented FTP Server in `C`. Codes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/System%20Programming).
