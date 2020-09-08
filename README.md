@@ -8,12 +8,12 @@
 - `20/08/04` Autosklearn Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/AutoML/Efficient%20and%20Robust%20Automated%20Machine%20Learning.md)
 
 ## :sparkles: Deep Learning
-### Deep Learning Study Group
-#### Principles of Deep Learning Study Group
+### Study Group
+#### - Principles of Deep Learning Study Group
 - `2020/01 ~ 2020/02` Offline seminar, studied the basics of Deep Neural Networks and implemented simple neurons using `numpy`.
   - Related works and TIL notes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/Deeplearning%20Seminar).
   - Seminar is now made as online-course on [Fast-Campus](https://fastcampus.co.kr/data_online_mathdeep).
-#### Kakao Brain NLP & Speech Study Group
+#### - Kakao Brain NLP & Speech Study Group
 - `2020/09 ~ ` Online seminar
   - `Week1` Voice Recognition Using MFCC Algorithm Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
 
