@@ -1,7 +1,7 @@
 # Today-I-Learned 📚
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSoYoungCho%2FToday-I-Learned%2F)](https://hits.seeyoufarm.com)
 - This is my **personal archive** of notes, codes, assignments, thoughts, etc.. Could be kinda messy :yum:..
-- Trying to upload even small things I've learned every day :muscle:
+- Trying to upload everyday even small things I've learned :muscle:
 
 ## :seedling: Machine Learning
 - `20/04/22`Recommendation Systems [(slides)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Machine%20Learning/Recommendation%20Systems/Recommender%20System%20in%20Spark.pdf)
