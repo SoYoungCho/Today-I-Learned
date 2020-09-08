@@ -1,6 +1,6 @@
 # Today-I-Learned 📚
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSoYoungCho%2FToday-I-Learned%2F)](https://hits.seeyoufarm.com)
-- This is my personal archive of notes, codes, assignments, thoughts, etc.
+- This is my **personal archive** of notes, codes, assignments, thoughts, etc.. Could be kinda messy :yum:..
 - Trying to upload even small things I've learned every day :muscle:
 
 ### sparkles: Machine Learning
