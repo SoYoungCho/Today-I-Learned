@@ -15,7 +15,8 @@
   - Seminar is now made as online-course on [Fast-Campus](https://fastcampus.co.kr/data_online_mathdeep).
 #### - Kakao Brain NLP & Speech Study Group
 - `2020/09 ~ ` Online seminar
-  - `Week1` Voice Recognition Using MFCC Algorithm Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
+  - `Week 1`
+    - Voice Recognition Using MFCC Algorithm Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
 
 ## :floppy_disk: System Programming
 - Took *System Programming* course in the department of Computer Engineering  as a personal challenge. `20-1`
