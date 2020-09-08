@@ -3,23 +3,9 @@
 [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSoYoungCho%2FToday-I-Learned%2F)](https://hits.seeyoufarm.com)
 
 ### Deep Learning Seminar *(20.01.10 ~ 20.02)*
-
-  + [20.01.17 Normalization](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.17%20Bias%2C%20LR%2C%20Normalization.ipynb)
-  + [20.01.20 Multi-variable, Correlation](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.20%20Multi-variable%2C%20Correlation.ipynb)
-  + [20.01.22 Polynomial Regression & Overfitting](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.22%20Polynomial%20Regression%2C%20Overfitting.md)
-  + [20.01.27 MLE&MLP (Probabiltiy, Likelihood)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.27%20MLE%26MLP%20(Probability%2C%20Likelihood).md)
-  + [20.01.27 Non-linear Boundary, Pytorch](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.27%20Non-linear%20Boundary%2C%20Pytorch.md)
-  + [20.01.29 Information Gain, KL Divergence](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.29%20Information%20Gain%2C%20KL%20Divergence.md)
-  + [20.01.31 Neuron, Activation Function](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/01.31%20Neuron%2C%20Activation%20Function.ipynb)
-  + [20.02.03 Hidden Layers](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.03%20Hidden%20Layers.ipynb)
-  + [20.02.05 Softmax Function]
-  + [20.02.10 MNIST](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.10%20MNIST.md)
-  + [20.02.12 Multi-layer Perceptron (MLP)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.12%20Multi%20layer%20perceptron.ipynb)
-  + [20.02.14 MLP with MNIST, Dropout, Auto-Encoder]
-  + [20.02.17 (Experiment) Random Initialization Effect]
-  + [20.02.17 CNN]
-  + [20.02.19 LeNet-5]
-  + [20.02.24 Box and Whisker Plot, HOG (Histogram of Oriented Gradients)](https://github.com/SoYoungCho/Today-I-Learned/blob/master/Deeplearning%20Seminar/Notes/02.24%20Box%20and%20Whisker%20plot%2C%20HOG%20for%20img%20feature%20extraction.ipynb)
+- Offline seminar, studyied the basics of Deep Neural Networks and implemented simple neurons using numpy.
+- Related works and TIL notes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/Deeplearning%20Seminar).
+- Seminar is now made as online-course on [Fast-Campus](https://fastcampus.co.kr/data_online_mathdeep).
   
   
 ### Neural Machine Translation (Capstone Project) *(20.01 ~ 20.06)*
