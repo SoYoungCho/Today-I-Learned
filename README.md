@@ -19,5 +19,6 @@
     - Voice Recognition Using MFCC Algorithm Paper [Review](https://github.com/SoYoungCho/Paper-Review/blob/master/Speech%20Recognition/Voice%20Recognition%20Using%20MFCC%20Algorithm.md)
 
 ## :floppy_disk: System Programming
+### - Course
 - Took *System Programming* course in the department of Computer Engineering  as a personal challenge. `20-1`
 - Implemented FTP Server in `C`. Codes can be found [here](https://github.com/SoYoungCho/Today-I-Learned/tree/master/System%20Programming).
