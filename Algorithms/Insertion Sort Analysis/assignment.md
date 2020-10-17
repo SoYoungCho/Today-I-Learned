@@ -8,9 +8,9 @@ Student Name : 조소영
 
 ## Consider the insertion sort. Consider each input as a sequence of n distinct numbers. 
 
-![](https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG)
-Above picture is the Example for Insertion Sort.
-Reference of the image : https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG
+![](https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG)  
+Above picture is the Example for Insertion Sort.  
+Reference of the image : https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG  
 
 ## 1. To show outputs and plots in the following problems, write your program with your comments.
 #### Explain your program at least four lines. 
