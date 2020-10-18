@@ -8,9 +8,9 @@ Student Name : 조소영
 
 ## Consider the insertion sort. Consider each input as a sequence of n distinct numbers. 
 
-![](https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG)  
-Above picture is the Example for Insertion Sort.  
-Reference of the image : https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG  
+![](https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG)
+Above picture is the Example for Insertion Sort.
+Reference of the image : https://upload.wikimedia.org/wikipedia/commons/e/ea/Insertion_sort_001.PNG
 
 ## 1. To show outputs and plots in the following problems, write your program with your comments.
 #### Explain your program at least four lines. 
@@ -101,7 +101,7 @@ array # A random input with length 10
 
 
 
-    [8, 7, 5, 4, 4, 5, 10, 3, 3, 4]
+    [1, 2, 1, 4, 7, 3, 3, 1, 9, 3]
 
 
 
@@ -113,7 +113,7 @@ insertion_sort(array)
 
 
 
-    [3, 3, 4, 4, 4, 5, 5, 7, 8, 10]
+    [1, 1, 1, 2, 3, 3, 3, 4, 7, 9]
 
 
 
@@ -271,6 +271,14 @@ plt.show()
 ![png](output_40_0.png)
 
 
+As for the worst case, I estimated the actual running time in insertion sort for each array from the size of 1 to 2000. As the worst case for insertion sort is the case when the array is sorted in descending order, I assumed that the arrays are given in descending order. I randomly sampled n numbers and used *sort(reverse=True)* to make each array of size *n* to create the worst case.
+
+The running time was estimated and returned from the function *insertion_sort_estimate_time()* and each estimated time was appended in the list time_list. Then I plotted the list using the function plot() using matplotlib module.
+
+The plot above is the result for the running time in insertion sort for each array of size *n* in worst cases - arrays given reverse sorted. The running time is mostly the same for all n from 1 to 2,000.
+
+For comparison with the average case, I have set the y-axis range from 0 to 1 for both the worst case and the average case. Although the array input size increases equally in both worst and average cases, the running time is relatively longer than the average case. The reason for the difference in number is same as Number 3; it  because the while loop runs for every element in the worst case.
+
 ### (b) The best case
 
 
@@ -288,10 +296,10 @@ plt.show()
 ```
 
 
-![png](output_42_0.png)
+![png](output_43_0.png)
 
 
-As for the best case, I also estimated the actuall running time in insertion sort for each array from the size of 1 to 2000. As the best case for insertion sort is the case when the array is sorted in ascending order, I assumed that the arrays are given in ascending order. I randomly sampled *n* numbers and used *sort()* to make each array of size n to create the best case.
+As for the best case, I also estimated the actual running time in insertion sort for each array from the size of 1 to 2000. As the best case for insertion sort is the case when the array is sorted in ascending order, I assumed that the arrays are given in ascending order. I randomly sampled *n* numbers and used *sort()* to make each array of size n to create the best case.
 
 The running time was estimated and returned from the function *insertion_sort_estimate_time()* and each estimated time was appended in the list *time_list*. Then I plotted the list using the function *plot()* from matplotlib module.
 
@@ -316,7 +324,7 @@ plt.show()
 ```
 
 
-![png](output_45_0.png)
+![png](output_46_0.png)
 
 
 As for the average case, I also estimated the running time in insertion sort for each array from the size of 1 to 2000, but by **using multiple random inputs given not sorted**. Therefore I randomly sampled *n* numbers and did not sort in either direction.
